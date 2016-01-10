@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nanodegree.nibedit.udacity.popularmoviesp1"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <!-- Splash screen -->
+        <activity
+            android:name="nanodegree.nibedit.udacity.popularmoviesp1.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Main Activity -->
+        <activity android:name="nanodegree.nibedit.udacity.popularmoviesp1.MainActivity" >
+        </activity>
+        <activity
+            android:name="nanodegree.nibedit.udacity.popularmoviesp1.MovieDetailsActivity"
+            android:label="@string/title_activity_movie_detail"
+            android:parentActivityName="nanodegree.nibedit.udacity.popularmoviesp1.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="nanodegree.nibedit.udacity.popularmoviesp1.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
